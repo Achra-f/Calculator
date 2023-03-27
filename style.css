@@ -1,0 +1,59 @@
+body {
+    margin: auto 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header h1 {
+    font-size: 5rem;
+}
+
+.calculator {
+    background-color: white;
+}
+
+.frame {
+    border: solid 0.15rem black;
+    border-radius: 1rem;
+    height: 62vh;
+    min-height: 500px;
+    width: 20%;
+    margin: auto;
+
+}
+
+.screen {
+    border: solid 0.15rem black;
+    border-radius: 1rem;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    min-height: 50px;
+}
+
+.elements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+}
+
+#clear {
+    grid-column: span 2;
+}
+
+#delete {
+    grid-column: span 2;
+}
