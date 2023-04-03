@@ -3,6 +3,7 @@ let firstOperand = 0;
 let secondOperand = 0;
 let currentOperator = null;
 
+//get user data
 const numbers = document.querySelectorAll('[data-number]');
 const operators = document.querySelectorAll('[data-operator]');
 const clear = document.getElementById('clear');
@@ -12,7 +13,7 @@ const point = document.getElementById('point');
 const result = document.getElementById('result');
 
 //math functions
-function sum(a, b) {
+function add(a, b) {
     return a + b;
 }
 
@@ -59,34 +60,31 @@ function changeNumber(number) {
         result.textContent = parseInt(screenNumber + number).toString();
 }
 
-
 //select operator
 operators.forEach((button) => {
     button.addEventListener('click', () => changeOperator(button.textContent));
 })
 
 function changeOperator(operator) {
-    if (operator == '+') {
-        currentOperator = "+";
-    }
-    else if (operator == '-') {
-        currentOperator = "-";
-    }
-    else if (operator == '×') {
-        currentOperator = "×";
-    }
-    else if (operator == '÷') {
-        currentOperator = "÷";
-    }
+    currentOperator = operator;
+    firstOperand = result.textContent;
+    result.textContent = null;
+    
 }
 
-//set operation
-function setOperation(operator) {
-    firstOperand = result.textContent
-    currentOperation = operator
 
 
-}
+
+    
+
+
+
+
+
+
+
+
+
 
 
 
